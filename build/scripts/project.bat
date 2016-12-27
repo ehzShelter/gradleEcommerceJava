@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\project.jar;%APP_HOME%\lib\mysql-connector-java-5.1.6.jar
+set CLASSPATH=%APP_HOME%\lib\project.jar;%APP_HOME%\lib\mysql-connector-java-5.1.40.jar
 
 @rem Execute project
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PROJECT_OPTS%  -classpath "%CLASSPATH%" main.MainClass %CMD_LINE_ARGS%
