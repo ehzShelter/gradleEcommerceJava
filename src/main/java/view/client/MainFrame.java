@@ -93,7 +93,7 @@ public class MainFrame{
         this.categoryPanel.add(this.productCombo);
         this.categoryPanel.add(this.selected);
 
-         //show all product data------------------
+        //show all product data------------------
         this.productPanel = new JPanel();
         this.productPanel.setBounds(10,150,700,300);
         this.productPanel.setLayout(null);
@@ -121,15 +121,25 @@ public class MainFrame{
                 int[] selectedRow = productTable.getSelectedRows();
                 int[] selectedColumns = productTable.getSelectedColumns();
 
-                for (int i = 0; i < selectedRow.length; i++) {
-                    for (int j = 0; j < selectedColumns.length; j++) {
-                        selectedData = String.valueOf(productTable.getValueAt(selectedRow[i], selectedColumns[j]));
+                if (productTable.getSelectedRow() > -1) {
+                    // print first column value from selected row
+
+                    selectedData = productTable.getValueAt(productTable.getSelectedRow(), 0).toString();
+                    // System.out.println(selectedData);
+
+                    if (selectedData != null) {
+                        JOptionPane.showMessageDialog(frame,"cart updated for " + selectedData,
+                                "selected product added to cart successfully", JOptionPane.PLAIN_MESSAGE);
                     }
+                    else {
+                        JOptionPane.showMessageDialog(null,"unssuccessful cart updated!",
+                                "cart not updated", JOptionPane.PLAIN_MESSAGE);
+
+                    }
+
                 }
-
-
-                System.out.println("Selected: " + String.valueOf(selectedData));
             }
+
 
         });
 
