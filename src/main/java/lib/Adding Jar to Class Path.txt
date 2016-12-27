@@ -1,0 +1,4 @@
+To add external jar into classpath follow the below syntax
+where the mysql.jar is located in lib folder
+
+java -cp "./lib/mysql.jar;" main.MainClass

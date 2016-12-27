@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'main.MainClass'
+
+
+sourceSets {
+    main {
+        println output.classesDir
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+}
+
+
+
+// Iterate over the source sets
+sourceSets.all {
+    println name
+}
+
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
