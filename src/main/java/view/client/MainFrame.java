@@ -84,7 +84,7 @@ public class MainFrame{
         this.productCombo.addItem("Movies");
         this.productCombo.addItem("Music");
 
-        this.categoryPanel.setBounds(150,10,400,100);
+        this.categoryPanel.setBounds(150,10,500,100);
         this.categoryPanel.add(this.adminBtn);
         this.categoryPanel.add(this.login);
         this.categoryPanel.add(this.register);
